@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Estacionamento Central: sistema de gestão de estacionamento para carros e motos.">
+  <title>Estacionamento Central DE FRANCA  </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-car" viewBox="0 0 48 48">
+      <path fill="currentColor"
+        d="M12 13c.9-3 3.4-5 6.5-5h11c3.1 0 5.6 2 6.5 5l2.4 8.2A5 5 0 0 1 42 26v11a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-2H13v2a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V26a5 5 0 0 1 3.6-4.8L12 13Zm4.2 1.2L14.3 21h19.4l-1.9-6.8A2.5 2.5 0 0 0 29.4 12H18.6a2.5 2.5 0 0 0-2.4 2.2ZM12.5 31a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm23 0a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+    </symbol>
+    <symbol id="i-moto" viewBox="0 0 48 48">
+      <path fill="currentColor"
+        d="M29 10h5l2.6 6.5 2.2-1.3 1.5 2.6-2.8 1.6 1.7 4.3A8 8 0 1 1 34 28.6l-1-2.5-4.6 7.9H18.9A8 8 0 1 1 13 24.7V22h-3v-4h12l2 4h6.8l-2.6-6.4L26 16v-4l3.1-.1-.1-1.9Zm-17 18a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm25.5.4 1.7 4.2-3.7 1.5-1.7-4.2a4 4 0 1 0 3.7-1.5ZM17 26.3a8 8 0 0 1 1.8 3.7h7.3l2.6-4.5H17v.8Z" />
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+      </g>
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"
+        d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" />
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+        <path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z" />
+        <circle cx="12" cy="9.5" r="2.5" />
+      </g>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"
+        d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z" />
+    </symbol>
+    <symbol id="i-whats" viewBox="0 0 24 24">
+      <path fill="currentColor"
+        d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.2Z" />
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="m4 7 8 6 8-6" />
+      </g>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+        d="M5 12.5l4.5 4.5L19 7.5" />
+    </symbol>
+    <symbol id="i-print" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+        <path d="M7 9V3h10v6" />
+        <rect x="3" y="9" width="18" height="8" rx="2" />
+        <path d="M7 14h10v7H7z" />
+      </g>
+    </symbol>
+    <symbol id="i-down" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        d="M12 4v11m-5-5 5 5 5-5M5 20h14" />
+    </symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+        d="M12 19V5m-6 6 6-6 6 6" />
+    </symbol>
+    <symbol id="i-up" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        d="M12 16V5m-5 5 5-5 5 5M5 20h14" />
+    </symbol>
+  </svg>
+
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">E</div>
+        <div>
+          <h1>Pátio Central</h1>
+          <p>Controle de entrada e saída · carros e motos</p>
+        </div>
+      </div>
+      <div class="hdr-right">
+        <div class="clock" id="clock" title="Data e hora atuais">--:--:--</div>
+        <div class="theme-switch" role="group" aria-label="Tema">
+          <button class="theme-opt" type="button" data-theme-opt="light" aria-pressed="false"><svg>
+              <use href="#i-sun" />
+            </svg><span>Claro</span></button>
+          <button class="theme-opt" type="button" data-theme-opt="dark" aria-pressed="false"><svg>
+              <use href="#i-moon" />
+            </svg><span>Escuro</span></button>
+        </div>
+      </div>
+    </header>
+    <div class="stripe" aria-hidden="true"></div>
+
+    <div class="sample" id="sampleBar" hidden>
+      <span><b>Dados de exemplo.</b> Os veículos abaixo são fictícios para mostrar o funcionamento.</span>
+      <button class="btn btn-ghost btn-sm" id="clearSample" type="button">Começar do zero</button>
+    </div>
+
+    <section class="stats" aria-label="Resumo">
+      <div class="stat"><span class="lbl"><i class="dot" style="background:var(--accent)"></i>Carros no
+          pátio</span><span class="val" id="sCar">0</span>
+        <div class="meter"><i id="mCar" style="background:var(--accent)"></i></div>
+      </div>
+      <div class="stat"><span class="lbl"><i class="dot" style="background:var(--moto)"></i>Motos no pátio</span><span
+          class="val" id="sMoto">0</span>
+        <div class="meter"><i id="mMoto" style="background:var(--moto)"></i></div>
+      </div>
+      <div class="stat"><span class="lbl">A receber no pátio</span><span class="val" id="sOpen">R$ 0</span><span
+          class="hint" id="sOpenSub">valor parcial atual</span></div>
+      <div class="stat stat-money"><span class="lbl">Ganho hoje</span><span class="val" id="sRev">R$ 0</span><span
+          class="hint" id="sRevSub">0 saídas</span></div>
+      <div class="stat stat-money"><span class="lbl" id="sMesLbl">Ganho no mês</span><span class="val" id="sMes">R$
+          0</span><span class="hint" id="sMesSub">0 saídas</span></div>
+      <div class="stat"><span class="lbl">Média por dia no mês</span><span class="val" id="sMed">R$ 0</span><span
+          class="hint" id="sMedSub">—</span></div>
+    </section>
+
+    <div class="main">
+      <div class="col">
+        <section class="panel" aria-labelledby="hEntrada">
+          <div class="panel-hd">
+            <h2 id="hEntrada">Registrar entrada</h2><span class="tk-next" id="tkNext"
+              title="Número do próximo ticket">Ticket 000001</span>
+          </div>
+          <div class="panel-bd">
+            <form id="fEntrada" novalidate>
+              <label class="f" for="placa">Placa do veículo
+                <input class="inp plate-input" id="placa" maxlength="8" placeholder="ABC1D23" autocomplete="off"
+                  spellcheck="false">
+                <span class="hint" id="placaHint">Formato Mercosul (ABC1D23) ou antigo (ABC-1234)</span>
+              </label>
+              <div class="f-group">
+                <span class="f-lbl">Tipo</span>
+                <div class="seg" role="radiogroup" aria-label="Tipo de veículo">
+                  <input type="radio" name="tipo" id="t-carro" value="carro" checked><label for="t-carro"><svg>
+                      <use href="#i-car" />
+                    </svg>Carro</label>
+                  <input type="radio" name="tipo" id="t-moto" value="moto"><label for="t-moto"><svg>
+                      <use href="#i-moto" />
+                    </svg>Moto</label>
+                </div>
+              </div>
+              <div class="row2">
+                <label class="f" for="vaga">Vaga
+                  <select class="inp" id="vaga"></select>
+                </label>
+                <label class="f" for="hEnt">Entrada
+                  <input class="inp" type="time" id="hEnt">
+                </label>
+              </div>
+              <label class="f" for="obs">Modelo / cor <span class="hint">opcional</span>
+                <input class="inp" id="obs" placeholder="Ex.: Onix prata" maxlength="40">
+              </label>
+              <button class="btn btn-primary" type="submit">Dar entrada</button>
+              <span class="hint kbd-hint">Atalho: <kbd>F2</kbd> volta para a placa</span>
+            </form>
+          </div>
+        </section>
+
+        <section class="panel" aria-labelledby="hCfg">
+          <div class="panel-hd">
+            <h2 id="hCfg">Configurações</h2>
+          </div>
+          <div class="panel-bd">
+            <div class="price-tabs" role="tablist" aria-label="Configurações">
+              <button class="price-tab" role="tab" aria-selected="true" data-cfg="precos" type="button">Preços</button>
+              <button class="price-tab" role="tab" aria-selected="false" data-cfg="vagas" type="button">Vagas</button>
+              <button class="price-tab" role="tab" aria-selected="false" data-cfg="dados" type="button">Dados</button>
+            </div>
+
+            <div class="cfg-pane" id="cfg-precos">
+              <div class="seg seg-sm" role="radiogroup" aria-label="Tabela do veículo">
+                <input type="radio" name="pt" id="pt-carro" value="carro" checked><label for="pt-carro">Carro</label>
+                <input type="radio" name="pt" id="pt-moto" value="moto"><label for="pt-moto">Moto</label>
+              </div>
+              <div class="price-grid">
+                <label class="f" for="p-h1">1ª hora (R$)<input class="inp" type="number" min="0" step="0.5"
+                    id="p-h1"></label>
+                <label class="f" for="p-hAd">Hora adicional (R$)<input class="inp" type="number" min="0" step="0.5"
+                    id="p-hAd"></label>
+                <label class="f" for="p-tol">Tolerância (min)<input class="inp" type="number" min="0" step="1"
+                    id="p-tol"></label>
+                <label class="f" for="p-dia">Diária máx. (R$)<input class="inp" type="number" min="0" step="0.5"
+                    id="p-dia"></label>
+              </div>
+              <p class="price-note" id="priceNote"></p>
+            </div>
+
+            <div class="cfg-pane" id="cfg-vagas" hidden>
+              <div class="price-grid">
+                <label class="f" for="cap-carro">Vagas de carro<input class="inp" type="number" min="1" max="200"
+                    step="1" id="cap-carro"></label>
+                <label class="f" for="cap-moto">Vagas de moto<input class="inp" type="number" min="1" max="200" step="1"
+                    id="cap-moto"></label>
+              </div>
+              <p class="price-note" id="capNote">Não é possível reduzir abaixo de uma vaga que está ocupada.</p>
+            </div>
+
+            <div class="cfg-pane" id="cfg-dados" hidden>
+              <p class="price-note" style="margin:0">Os dados ficam salvos neste navegador. Faça backup para não perder
+                nada ao trocar de computador.</p>
+              <div class="cfg-actions">
+                <button class="btn btn-ghost" id="bkExport" type="button"><svg class="ico">
+                    <use href="#i-down" />
+                  </svg>Exportar backup (.json)</button>
+                <label class="btn btn-ghost" for="bkFile"><svg class="ico">
+                    <use href="#i-up" />
+                  </svg>Importar backup</label>
+                <input type="file" id="bkFile" accept=".json,application/json" hidden>
+                <button class="btn btn-ghost danger-ghost" id="bkReset" type="button">Apagar todos os dados</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="col">
+        <section class="panel" aria-labelledby="hMapa">
+          <div class="panel-hd">
+            <h2 id="hMapa">Mapa do pátio</h2>
+            <div class="seg seg-sm map-filter" role="radiogroup" aria-label="Filtrar vagas">
+              <input type="radio" name="mf" id="mf-todas" value="todas" checked><label for="mf-todas">Todas</label>
+              <input type="radio" name="mf" id="mf-ocup" value="ocupadas"><label for="mf-ocup">Ocupadas</label>
+              <input type="radio" name="mf" id="mf-livres" value="livres"><label for="mf-livres">Livres</label>
+            </div>
+          </div>
+          <div class="panel-bd">
+            <p class="hint map-hint">Toque numa vaga ocupada para dar saída ou numa vaga livre para escolhê-la.</p>
+            <div class="lot">
+              <div class="lot-lbl"><span>Setor A · Carros</span><em id="lotCar">0 livres</em></div>
+              <div class="spots car" id="spotsCar"></div>
+              <div class="lot-lbl"><span>Setor B · Motos</span><em id="lotMoto">0 livres</em></div>
+              <div class="spots moto" id="spotsMoto"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="tabs" role="tablist">
+            <button class="tab" role="tab" aria-selected="true" data-tab="ativos" type="button">No pátio <span
+                class="cnt" id="cAtivos">0</span></button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="hist" type="button">Histórico <span
+                class="cnt" id="cHist">0</span></button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="rel" type="button">Relatório</button>
+          </div>
+          <div class="panel-bd">
+            <div class="toolbar">
+              <input class="inp" id="busca" placeholder="Buscar placa ou ticket…" autocomplete="off">
+              <select class="inp sel" id="periodo" aria-label="Período do relatório" hidden>
+                <option value="hoje">Hoje</option>
+                <option value="mes" selected>Este mês</option>
+                <option value="7d">Últimos 7 dias</option>
+                <option value="30d">Últimos 30 dias</option>
+                <option value="tudo">Todo o período</option>
+              </select>
+              <div class="toolbar-btns">
+                <button class="btn btn-ghost btn-sm" id="csvBtn" type="button" hidden><svg class="ico">
+                    <use href="#i-down" />
+                  </svg>Exportar CSV</button>
+                <button class="btn btn-ghost btn-sm danger-ghost" id="clearHist" type="button" hidden>Limpar
+                  histórico</button>
+              </div>
+            </div>
+            <div class="tbl-wrap" id="tblWrap">
+              <table>
+                <thead id="thead"></thead>
+                <tbody id="tbody"></tbody>
+              </table>
+            </div>
+            <div class="empty" id="empty" hidden></div>
+            <div class="report" id="report" hidden></div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- RODAPÉ: troque os dados de exemplo abaixo pelos dados do seu estacionamento -->
+    <footer class="foot">
+      <div class="stripe" aria-hidden="true"></div>
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <div class="brand">
+            <div class="logo" aria-hidden="true">E</div>
+            <div>
+              <strong class="foot-name"> Pátio Central</strong>
+              <span class="hint">Estacionamento de carros e motos</span>
+            </div>
+          </div>
+          <p class="foot-about">Pátio coberto e monitorado, com 100 vagas para carros e 100 para motos. Pagamento por
+            Pix, dinheiro ou cartão.</p>
+        </div>
+
+        <div class="foot-col">
+          <h3>Endereço</h3>
+          <address>
+            Rua Ovidor Freire, 1943 · Centro<br>
+            Franca · SP<br>
+            CEP 14400-630
+          </address>
+          <a class="foot-link" href="https://www.google.com/maps/search/?api=1&query=estacionamento+centro+Franca+SP"
+            target="_blank" rel="noopener">
+            <svg class="ico">
+              <use href="#i-pin" />
+            </svg>Ver no mapa
+          </a>
+        </div>
+
+        <div class="foot-col">
+          <h3>Contato</h3>
+          <ul class="foot-list">
+            <li><svg class="ico">
+                <use href="#i-phone" />
+              </svg><a href="tel:+551633552564">(16) 33552564</a></li>
+            <li><svg class="ico">
+                <use href="#i-whats" />
+              </svg><a href="https://wa.me/5516998655114" target="_blank" rel="noopener">(16) 998655114</a></li>
+            <li><svg class="ico">
+                <use href="#i-mail" />
+              </svg><a href="mailto:contato@patiocentral.com.br">contato@patiocentral.com.br</a></li>
+          </ul>
+          <a class="btn foot-whats"
+            href="https://wa.me/5516998655114?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20estacionamento."
+            target="_blank" rel="noopener">
+            <svg class="ico">
+              <use href="#i-whats" />
+            </svg>Chamar no WhatsApp
+          </a>
+        </div>
+
+        <div class="foot-col">
+          <h3>Funcionamento</h3>
+          <dl class="foot-hours">
+            <dt>Segunda a sexta</dt>
+            <dd>08:00 – 18:00</dd>
+            <dt>Sábado</dt>
+            <dd>08:00 – 15:00</dd>
+            <dt>Domingo e feriados</dt>
+            <dd>fechado</dd>
+          </dl>
+          <span class="foot-status" id="footStatus"></span>
+        </div>
+      </div>
+
+      <div class="foot-bottom">
+        <span>© <span id="footYear">2026</span> Pátio Central Estacionamento · 12.345.678/0001-95</span>
+        <span>Todos os direitos reservados</span>
+        <button class="to-top" id="toTop" type="button" aria-label="Voltar ao topo da página">
+          <svg class="ico">
+            <use href="#i-arrow-up" />
+          </svg>Voltar ao topo
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <div class="overlay" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <div class="ticket">
+      <div class="ticket-hd">
+        <h3 id="mTitle">Saída</h3><span class="mono" id="mVaga"></span>
+      </div>
+      <div class="perf"></div>
+      <div class="ticket-bd" id="mBody"></div>
+    </div>
+  </div>
+
+  <div class="overlay" id="confirm" hidden role="dialog" aria-modal="true" aria-labelledby="cTitle">
+    <div class="ticket">
+      <div class="ticket-hd">
+        <h3 id="cTitle">Confirmar</h3>
+      </div>
+      <div class="ticket-bd" style="padding-top:18px">
+        <p id="cMsg" style="margin:0"></p>
+        <div class="ticket-actions"><button class="btn btn-ghost" id="cNo" type="button">Cancelar</button><button
+            class="btn btn-danger" id="cYes" type="button">Confirmar</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <div id="printArea" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
